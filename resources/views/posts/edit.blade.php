@@ -8,11 +8,11 @@
     <li class="breadcrumb-item active"><a href="{{ route('posts.store') }}">List Pos</a></li>
     <li class="breadcrumb-item active">Edit Post</li>
 </ol>
+
 <div class="card mb-4">
     <div class="card-body">
         DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-        <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-        .
+        <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>.
     </div>
 </div>
 
@@ -27,7 +27,7 @@
             @method('PUT')
             <div class="mb-3">
                 <label for="title" class="form-label">Titulo</label>
-                <input class="form-control"  type="text" name="title" value="{{ $post->title }}" placeholder="Write the title of the post">
+                <input class="form-control"  type="text" name="title" value="{{ $post->title }}" placeholder="Write the title of the post" required>
             </div>
             <div class="mb-3">
                 <label for="body" class="form-label">Contenido</label>
@@ -56,5 +56,20 @@
         </form>
     </div>
 </div>
+
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        plugins: [
+            'advlist autolink link image lists charmap print preview hr anchor pagebreak',
+            'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+            'table emoticons template paste help'
+        ],
+        toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media | forecolor backcolor emoticons',
+        toolbar_mode: 'floating',
+        tinycomments_mode: 'embedded',
+        tinycomments_author: 'Author name',
+    });
+</script>
 
 @endsection

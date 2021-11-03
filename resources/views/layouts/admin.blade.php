@@ -11,10 +11,15 @@
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('assets/css/app-admin.css') }}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+
+    <!-- Personal styles -->
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/fonts/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/fonts/ionicons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/Footer-Clean.css') }}">
+
+    <!-- TinyMCE -->
+    <script src="https://cdn.tiny.cloud/1/bneo91o1j0otb9d6p735i9s5w75a1bmm9q2p4wmwwvg7gvdi/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
 </head>
 
